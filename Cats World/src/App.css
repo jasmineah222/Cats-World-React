@@ -113,6 +113,19 @@ button{
     width: 15rem;
     height: 15rem;
   }
+
+   /* Compare Page */
+
+   .navbar{
+    display: grid;
+    grid-auto-flow: column;
+    position: relative;
+    left: auto;
+    right: auto;
+    padding: 1.5rem;
+    gap: 1rem;
+    justify-items: center;
+  }
   
 }
 
@@ -199,6 +212,25 @@ button{
     border: 7.5px rgb(154, 203, 231) solid;
     border-radius: 10px;
     box-shadow: 2.75px 2.75px 2.75px 0px rgba(2, 61, 95, 0.342);
+  }
+
+  /* Compare Page */
+
+  .navbar{
+    display: grid;
+    grid-auto-flow: column;
+    position: relative;
+    left: auto;
+    right: auto;
+    padding: 1.5rem;
+    gap: 1rem;
+    justify-items: center;
+  }
+
+  #icon {
+    width: 2.5rem;
+    height: 2.5rem;
+
   }
 
 }
