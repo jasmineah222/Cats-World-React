@@ -3,12 +3,11 @@
   margin-left: auto;
   margin-right: auto;
   /* padding: 0; */
-
 }
 
 .kittens-container{
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns:auto auto auto;
   gap: 30px;
   justify-content: space-between;
 }
@@ -21,27 +20,44 @@
 }
 
 .kittens-box{
+  width: 20rem;
+  height: 22.5rem;
   padding: 40px;
   justify-content: center;
 }
 
-.kittens-box > button{
+.intro{
   display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 30px;
-  justify-content: space-between;
+  grid-template-columns:auto;
+  gap: 15px;
+  padding: 40px;
+  position: relative;
+  top: -2.5rem;
 }
 
-.kittens-container > image{
-  width: 1000px;
-  height: 1000px;
+.btn{
+  display: grid;
+  grid-auto-flow: column;
+  gap: 25px;
+  position: relative;
+  bottom: 3.5rem;
 }
 
-@media (min-width: 500px) and (max-width: 1000px) {
+button{
+  border: 5px rgba(1, 122, 192, 0) solid;
+  box-shadow: 2.5px 2.5px 2.5px 0px rgba(2, 61, 95, 0.342);
+}
+
+.pics{
+  width: 15rem;
+  height: 15rem;
+}
+
+@media (min-width: 800px) and (max-width: 1030px) {
   .kittens-container{
     display: grid;
     grid-template-columns:auto auto;
-    gap: 25px;
+    gap: 30px;
     justify-content: space-between;
   }
   
@@ -53,28 +69,54 @@
   }
   
   .kittens-box{
+    width: 20rem;
+    height: 22.5rem;
     padding: 40px;
     justify-content: center;
   }
-  
-  .kittens-box > button{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 30px;
-    justify-content: space-between;
-  }
-  
-  .kittens-container > image{
-    width: 1000px;
-    height: 1000px;
-  }
-}
 
-@media (min-width: 288px) and (max-width: 500px) {
-  .kittens-container{
+  h3{
+    font-size: 1 rem;
+    text-align: center;
+    /* width: 5rem; */
+    left:auto;
+    right: auto;
+  }
+  
+  .intro{
     display: grid;
     grid-template-columns:auto;
     gap: 15px;
+    padding: 40px;
+    position: relative;
+    top: -2.5rem;
+  }
+
+  .btn{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 25px;
+    position: relative;
+    bottom: 3.5rem;
+  }
+
+  button{
+    border: 5px rgba(1, 122, 192, 0) solid;
+    box-shadow: 2.5px 2.5px 2.5px 0px rgba(2, 61, 95, 0.342);
+  }
+  
+  .pics{
+    width: 15rem;
+    height: 15rem;
+  }
+  
+}
+
+@media (min-width: 250px) and (max-width: 799px) {
+  .kittens-container{
+    display: grid;
+    grid-template-columns:auto;
+    gap: 30px;
     justify-content: space-between;
   }
   
@@ -87,32 +129,149 @@
   
  /* follow these style guidleines (Mobile First Design) */
   .kittens-box{
+    width: 20rem;
+    height: 22.5rem;
     padding: 40px;
     justify-content: center;
   }
-  
+
+  h3{
+    font-size: 1 rem;
+    text-align: center;
+    /* width: 5rem; */
+    left:auto;
+    right: auto;
+  }
+
   .intro{
     display: grid;
     grid-template-columns:auto;
     gap: 15px;
     padding: 40px;
+    position: relative;
+    top: -2.5rem;
   }
 
   .btn{
     display: grid;
     grid-auto-flow: column;
     gap: 25px;
-
+    position: relative;
+    bottom: 3.5rem;
   }
+
   button{
     border: 5px rgba(1, 122, 192, 0) solid;
     box-shadow: 2.5px 2.5px 2.5px 0px rgba(2, 61, 95, 0.342);
-
   }
   
-  .kittens-container > image{
-    width: 1000px;
-    height: 1000px;
+  .pics{
+    width: 15rem;
+    height: 15rem;
+  }
+
+  /* Single Cat Page */
+
+  .single-cat{
+    display: grid;
+    grid-auto-flow: row;
+    position: relative;
+    top: auto;
+    bottom: auto;
+    padding: 2.5rem;
+    width: 80vw;
+    height: 80vh;
+    gap: 1.25rem;
+    justify-items: center;
+  }
+
+  .kit{
+    position: relative;
+    right: auto;
+    left: auto;
+    width: 25rem;
+    height: 25rem;
+    border: 7.5px rgb(154, 203, 231) solid;
+    border-radius: 10px;
+    box-shadow: 2.75px 2.75px 2.75px 0px rgba(2, 61, 95, 0.342);
+  }
+
+}
+
+@media (min-width: 250px) and (max-width: 500px) {
+  .single-cat{
+    display: grid;
+    grid-auto-flow: row;
+    position: relative;
+    top: auto;
+    bottom: auto;
+    padding: 2.5rem;
+    width: 65vw;
+    height: 80vh;
+    gap: 1.25rem;
+    justify-items: center;
+  }
+
+  .kit{
+    position: relative;
+    right: auto;
+    left: auto;
+    width: 25rem;
+    height: 25rem;
+    border: 7.5px rgb(154, 203, 231) solid;
+    border-radius: 10px;
+    box-shadow: 2.75px 2.75px 2.75px 0px rgba(2, 61, 95, 0.342);
   }
 }
 
+@media (min-width: 200px) and (max-width: 500px) {
+  .single-cat{
+    display: grid;
+    grid-auto-flow: row;
+    position: relative;
+    top: auto;
+    bottom: auto;
+    padding: 0.5rem;
+    width: 45vw;
+    height: 80vh;
+    gap: 1.25rem;
+    justify-items: center;
+  }
+
+  .kit{
+    position: relative;
+    right: auto;
+    left: auto;
+    width: 22.5rem;
+    height: 22.5rem;
+    border: 7.5px rgb(154, 203, 231) solid;
+    border-radius: 10px;
+    box-shadow: 2.75px 2.75px 2.75px 0px rgba(2, 61, 95, 0.342);
+  }
+}
+
+@media (min-width: 200px) and (max-width: 475px) {
+  .single-cat{
+    display: grid;
+    grid-auto-flow: row;
+    position: relative;
+    top: auto;
+    bottom: auto;
+    padding: 0.5rem;
+    width: 30vw;
+    height: 100vh;
+    gap: 1.25rem;
+    justify-items: center;
+  }
+
+  .kit{
+    position: relative;
+    right: auto;
+    left: auto;
+    width: 20rem;
+    height: 20rem;
+    border: 7.5px rgb(154, 203, 231) solid;
+    border-radius: 10px;
+    box-shadow: 2.75px 2.75px 2.75px 0px rgba(2, 61, 95, 0.342);
+  }
+}
