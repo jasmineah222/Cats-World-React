@@ -62,7 +62,7 @@ function AllCats() {
                         </div>
             })
             :
-            <h2>No Kittens Here! 😮 </h2>
+            <h2>No Kittens Here! 😼  </h2>
     }
 
     </main>
