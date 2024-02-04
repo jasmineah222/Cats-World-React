@@ -49,7 +49,7 @@ function AllCats() {
             cats.map(cat => {
                 return  <div className="kittens-box" key={cat.id}>
                             <div className="intro">
-                              <h3>{cat.name}</h3>
+                              <div><h3>{cat.name}</h3></div>
                               <img className="pics" src={cat.image.url} />
 
                             </div>

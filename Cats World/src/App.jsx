@@ -22,7 +22,10 @@ function App() {
         
       </Routes>
 
-      <footer className='name'>@JH Organization</footer>
+      <div className='name'>
+        <h6>@JH Organization</h6>
+      </div>
+
     </div>
   )
 }

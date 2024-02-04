@@ -51,24 +51,15 @@ function Compare() {
                             <div className="intro">
                               <img className="pics" src={cat.image.url} />
                                 <h3>{cat.name}</h3>
-                                <h3>{cat.affection_level}</h3>
-                                <h3>{cat.child_friendly}</h3>
-                                <h3>{cat.cat_friendly }</h3>
-                                <h3>{cat.dog_friendly}</h3>
-                                <h3>{cat.energy_level }</h3>
-                                <h3>{cat.grooming}</h3>
-                                <h3>{cat.health_issues}</h3>
-                                <h3>{cat.intelligence }</h3>
-                                <h3>{cat.shedding_level}</h3>
-                                <h3>{cat.social_needs }</h3>
-                                <h3>{cat.stranger_friendly}</h3>
-                                <h3>{cat.vocalisation}</h3>
+                                <h3 className="desc">Social Needs: {cat.social_needs }</h3>
+                                <h3 className="desc">Intelligence: {cat.intelligence }</h3>
+   
 
                             </div>
                             
-                            <div className="btn">
+                            {/* <div className="btn">
                               <button onClick={() => navigate(`/details/${cat.id}`)}>Details</button>
-                            </div>
+                            </div> */}
                         </div>
             })
             :
