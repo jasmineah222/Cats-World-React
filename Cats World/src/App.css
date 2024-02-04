@@ -1,20 +1,30 @@
 * {
   margin: 0 0;
-  margin-left: auto;
-  margin-right: auto;
-  /* padding: 0; */
+  padding: 0;
+  
+}
+
+body {
+  background-color: rgba(155, 15, 136, 0.308);
+  display:grid;
+  row-gap: 10rem;
+}
+
+/* centers the page */
+.app {
+  display:grid;
+  row-gap: 3rem;
+  place-items: center;
 }
 
 .kittens-container{
   display: grid;
-  grid-template-columns:auto auto auto;
+  grid-template-columns:auto auto auto auto auto auto;
   gap: 30px;
-  justify-content: space-between;
-  justify-items: center;
 }
 
 .kittens-container > div{
-  border: 5px rgb(154, 203, 231) solid;
+  border: 7.5px rgba(155, 15, 136, 0.349) solid;
   border-radius: 5px;
   box-shadow: 10px 10px 10px;
   padding: 15px;
@@ -27,6 +37,11 @@
   justify-content: center;
 }
 
+h3{
+  font-size: 1 rem;
+  text-align: center;
+}
+
 .intro{
   display: grid;
   grid-template-columns:auto;
@@ -34,6 +49,11 @@
   padding: 40px;
   position: relative;
   top: -2.5rem;
+}
+
+.name{
+  position: relative;
+  bottom: 0;
 }
 
 .btn{
@@ -44,6 +64,7 @@
   bottom: 3.5rem;
 }
 
+/* Home button */
 button{
   border: 5px rgba(1, 122, 192, 0) solid;
   box-shadow: 2.5px 2.5px 2.5px 0px rgba(2, 61, 95, 0.342);
@@ -54,272 +75,166 @@ button{
   height: 15rem;
 }
 
+ /* Compare Page */
+
+ menu {
+  display: grid;
+  grid-template-columns: max-content;
+  row-gap: 5rem;
+  justify-content: center;
+}
+/* Navigation Bar */
+
+.navbar{
+  position: relative;
+  top: 0;
+  display: grid;
+  grid-auto-flow: column;
+  position: relative;
+  left: auto;
+  right: auto; 
+  top: 1.25rem;
+  padding: 1.5rem;
+  gap: 2.5rem;
+  justify-items: center;
+  box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem rgba(155, 15, 136, 0.349);
+  border-radius: 5px;
+}
+
+#icon {
+  width: 5.5rem;
+  height: 5.5rem;
+
+}
+
+/* Single Cat Page */
+
+.single-cat{
+  display: grid;
+  grid-auto-flow: row;
+  padding: 1.5rem;
+  width: 75rem;
+  height: 75rem;
+  row-gap: 1.5rem;
+  justify-items: center;
+}
+
+.kit{
+  right: auto;
+  left: auto;
+  width: 50rem;
+  height: 50rem;
+  border: 7.5px rgba(155, 15, 136, 0.349) solid;
+  border-radius: 10px;
+  box-shadow: 2.75px 2.75px 2.75px 0px rgba(155, 15, 136, 0.349);
+}
+
 /* Responsiveness */
 
-@media (min-width: 800px) and (max-width: 1300px) {
+/* Home Page Responsiveness */
+
+@media (max-width: 2400px) {
   .kittens-container{
-    display: grid;
+    grid-template-columns:auto auto auto auto auto;
+  }
+}
+
+@media (max-width: 2000px) {
+  .kittens-container{
+    grid-template-columns:auto auto auto auto;
+  }
+}
+
+@media (max-width: 1700px) {
+  .kittens-container{
+    grid-template-columns:auto auto auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .kittens-container{
     grid-template-columns:auto auto;
-    gap: 30px;
-    justify-content: space-between;
-    justify-items: center;
   }
-  
-  .kittens-container > div{
-    border: 5px rgb(154, 203, 231) solid;
-    border-radius: 5px;
-    box-shadow: 10px 10px 10px;
-    padding: 15px;
-  }
-  
-  .kittens-box{
-    width: 20rem;
-    height: 22.5rem;
-    padding: 40px;
-    justify-content: center;
-  }
-
-  h3{
-    font-size: 1 rem;
-    text-align: center;
-    /* width: 5rem; */
-    left:auto;
-    right: auto;
-  }
-  
-  .intro{
-    display: grid;
-    grid-template-columns:auto;
-    gap: 15px;
-    padding: 40px;
-    position: relative;
-    top: -2.5rem;
-  }
-
-  .btn{
-    display: grid;
-    grid-auto-flow: column;
-    gap: 25px;
-    position: relative;
-    bottom: 3.5rem;
-  }
-
-  button{
-    border: 5px rgba(1, 122, 192, 0) solid;
-    box-shadow: 2.5px 2.5px 2.5px 0px rgba(2, 61, 95, 0.342);
-  }
-  
-  .pics{
-    width: 15rem;
-    height: 15rem;
-  }
-
-   /* Compare Page */
-
-   .navbar{
-    display: grid;
-    grid-auto-flow: column;
-    position: relative;
-    left: auto;
-    right: auto;
-    padding: 1.5rem;
-    gap: 1rem;
-    justify-items: center;
-  }
-  
 }
 
-@media (min-width: 250px) and (max-width: 799px) {
+@media (max-width: 800px) {
   .kittens-container{
-    display: grid;
     grid-template-columns:auto;
-    gap: 30px;
-    justify-content: space-between;
-    justify-items: center;
   }
+}
+
+/* Single Cat Page Responsiveness */
+@media (max-width: 1300px) {
+
+.single-cat{
+  width: 60rem;
+  height: 75rem;
+}
+.kit{
+  width: 50rem;
+  height: 50rem;
+}
+}
+
+@media (max-width: 1000px) {
   
-  .kittens-container > div{
-    border: 5px rgb(154, 203, 231) solid;
-    border-radius: 5px;
-    box-shadow: 10px 10px 10px;
-    padding: 15px;
-  }
-  
- /* follow these style guidleines (Mobile First Design) */
-  .kittens-box{
-    width: 20rem;
-    height: 22.5rem;
-    padding: 40px;
-    justify-content: center;
-  }
-
-  h3{
-    font-size: 1 rem;
-    text-align: center;
-    /* width: 5rem; */
-    left:auto;
-    right: auto;
-  }
-
-  .intro{
-    display: grid;
-    grid-template-columns:auto;
-    gap: 15px;
-    padding: 40px;
-    position: relative;
-    top: -2.5rem;
-  }
-
-  .btn{
-    display: grid;
-    grid-auto-flow: column;
-    gap: 25px;
-    position: relative;
-    bottom: 3.5rem;
-  }
-
-  button{
-    border: 5px rgba(1, 122, 192, 0) solid;
-    box-shadow: 2.5px 2.5px 2.5px 0px rgba(2, 61, 95, 0.342);
-  }
-  
-  .pics{
-    width: 15rem;
-    height: 15rem;
-  }
-
-  /* Single Cat Page */
-
   .single-cat{
-    display: grid;
-    grid-auto-flow: row;
-    position: relative;
-    top: auto;
-    bottom: auto;
-    padding: 2.5rem;
-    width: 80vw;
-    height: 80vh;
-    gap: 1.25rem;
-    justify-items: center;
+    width: 50rem;
+    height: 70rem;
   }
-
   .kit{
-    position: relative;
-    right: auto;
-    left: auto;
+    width: 40rem;
+    height: 40rem;
+  }
+  
+}
+
+@media (max-width: 950px) {
+
+.single-cat{
+  width: 30rem;
+  height: 50rem;
+}
+.kit{
+  width: 35rem;
+  height: 35rem;
+}
+}
+
+@media (max-width: 900px) {
+  
+  .app{
+    display:flex;
+    row-gap: 1.5rem;
+  }
+  
+  .single-cat{
     width: 25rem;
-    height: 25rem;
-    border: 7.5px rgb(154, 203, 231) solid;
-    border-radius: 10px;
-    box-shadow: 2.75px 2.75px 2.75px 0px rgba(2, 61, 95, 0.342);
+    height: 40rem;
   }
-
-  /* Compare Page */
-
-  .navbar{
-    display: grid;
-    grid-auto-flow: column;
-    position: relative;
-    left: auto;
-    right: auto;
-    padding: 1.5rem;
-    gap: 1rem;
-    justify-items: center;
-  }
-
-  #icon {
-    width: 2.5rem;
-    height: 2.5rem;
-
-  }
-
-}
-
-@media (min-width: 250px) and (max-width: 500px) {
-
-    /* Single Cat Page */
-
-  .single-cat{
-    display: grid;
-    grid-auto-flow: row;
-    position: relative;
-    top: auto;
-    bottom: auto;
-    padding: 2.5rem;
-    width: 65vw;
-    height: 80vh;
-    gap: 1.25rem;
-    justify-items: center;
-  }
-
+  
   .kit{
-    position: relative;
-    right: auto;
-    left: auto;
-    width: 25rem;
-    height: 25rem;
-    border: 7.5px rgb(154, 203, 231) solid;
-    border-radius: 10px;
-    box-shadow: 2.75px 2.75px 2.75px 0px rgba(2, 61, 95, 0.342);
-  }
-}
-
-@media (min-width: 200px) and (max-width: 500px) {
-
-    /* Single Cat Page */
-
-  .single-cat{
-    display: grid;
-    grid-auto-flow: row;
-    position: relative;
-    top: auto;
-    bottom: auto;
-    padding: 0.5rem;
-    width: 45vw;
-    height: 80vh;
-    gap: 1.25rem;
-    justify-items: center;
-  }
-
-  .kit{
-    position: relative;
-    right: auto;
-    left: auto;
-    width: 22.5rem;
-    height: 22.5rem;
-    border: 7.5px rgb(154, 203, 231) solid;
-    border-radius: 10px;
-    box-shadow: 2.75px 2.75px 2.75px 0px rgba(2, 61, 95, 0.342);
-  }
-}
-
-@media (min-width: 200px) and (max-width: 475px) {
-
-    /* Single Cat Page */
-
-  .single-cat{
-    display: grid;
-    grid-auto-flow: row;
-    position: relative;
-    top: auto;
-    bottom: auto;
-    padding: 0.5rem;
-    width: 30vw;
-    height: 100vh;
-    gap: 1.25rem;
-    justify-items: center;
-  }
-
-  .kit{
-    position: relative;
-    right: auto;
-    left: auto;
     width: 20rem;
     height: 20rem;
-    border: 7.5px rgb(154, 203, 231) solid;
-    border-radius: 10px;
-    box-shadow: 2.75px 2.75px 2.75px 0px rgba(2, 61, 95, 0.342);
   }
+  
 }
 
+@media (max-width: 600px) {
 
+.app{
+  display:grid;
+  row-gap: 1.5rem;
+}
+
+.single-cat{
+  width: 25rem;
+  height: 40rem;
+}
+
+.kit{
+  width: 20rem;
+  height: 20rem;
+}
+
+}
