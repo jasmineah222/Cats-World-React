@@ -53,7 +53,7 @@ function Kitty() {
         }
         
 
-    return <main>
+    return <>
         {
             kitty.id ?
             
@@ -69,7 +69,7 @@ function Kitty() {
             :
             <h1>Kitty not found</h1>
         }
-    </main>
+    </>
 }
 
-export default Kitty
+export default Kitty;
